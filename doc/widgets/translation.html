@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Translation - PhotonUI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/png" href="/PhotonUI/images/favicon.png" />
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/PhotonUI/style/style.css">
+        <script src="/PhotonUI/js/photonui.js"></script>
+        <script src="/PhotonUI/js/highlight.pack.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+    <div class="page">
+
+        <div class="header-left">
+            <img src="/PhotonUI/images/photonui-logo_white_300x300.png" alt="PhotonUI logo" />
+        </div>
+
+        <div class="header-right">
+            <h1>PhotonUI</h1>
+            <p>A javascript framework to create user interfaces</p>
+            <nav class="nav">
+                
+                    <a href="/PhotonUI/">Home</a>
+                
+                    <a href="/PhotonUI/doc/">Documentation</a>
+                
+                    <a href="https://github.com/wanadev/PhotonUI">GitHub</a>
+                
+                    <a href="https://github.com/wanadev/PhotonUI/archive/master.zip">Download</a>
+                
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+
+        <div id="content">
+            
+
+    <div class="demo-runner">
+        <div class="page">
+            <div class="left">
+                
+                    <h2>Translation</h2>
+                
+                <div id="demo"></div>
+            </div>
+            <div class="right">
+                <div id="demo-error"></div>
+                <script type="text/plain" id="demo-code-content">var translation = new photonui.Translation();
+
+translation.addCatalogs({
+    "fr": {
+        "messages": {
+            "Hello World": ["Bonjour le monde"]
+        }
+    }
+});
+
+translation.locale = "fr";  // Change the locale to test
+
+var label = new photonui.Label({
+    text: _("Hello World")
+});
+
+photonui.domInsert(label, "demo");
+</script>
+                <div id="demo-code"></div>
+                <button id="run-script"><i class="fa fa-play"></i> Run (Ctrl+Enter)</button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <script src="/PhotonUI/js/codemirror.js"></script>
+    <script src="/PhotonUI/js/codemirror-mode-javascript.js"></script>
+    <script src="/PhotonUI/js/script-runner.js"></script>
+
+
+<div class="page">
+    <article id="page-width-demo-undefined" class="article article-type-page-width-demo">
+        <p><code>photonui.Translation</code> adds internationalization functionalities to your application.</p>
+<p><strong>NOTE:</strong> When you instantiate the translation widget, you can pass the <code>noGlobal</code> option to avoid the creation of the global <code>window._</code> function. If you do so, you will have to use the <code>lazyGettext()</code> method of <code>photonui.Translation</code> instead of the <code>_()</code> global function.</p>
+<h3 id="Class-Reference"><a href="#Class-Reference" class="headerlink" title="Class Reference"></a>Class Reference</h3><ul>
+<li><a href="../../ref/classes/photonui.Translation.html">Translation class reference</a></li>
+</ul>
+<h3 id="Extracting-strings-and-generating-catalogs"><a href="#Extracting-strings-and-generating-catalogs" class="headerlink" title="Extracting strings and generating catalogs"></a>Extracting strings and generating catalogs</h3><p><code>photonui.Translation</code> is based on <em>stone.js</em>. You can find its documentation on GitHub:</p>
+<ul>
+<li><a href="https://github.com/flozz/stone.js" target="_blank" rel="external">https://github.com/flozz/stone.js</a></li>
+</ul>
+<h3 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Translation</span></div><div class="line"><span class="keyword">var</span> tr = <span class="keyword">new</span> photonui.Translation();</div><div class="line">tr.addCatalogs(&#123;</div><div class="line">    <span class="string">"fr"</span>: &#123;</div><div class="line">        <span class="string">"plural-forms"</span>: <span class="string">"nplurals=2; plural=(n &gt; 1);"</span>,</div><div class="line">        <span class="string">"messages"</span>: &#123;</div><div class="line">            <span class="string">"Hello World"</span>: [<span class="string">"Bonjour le monde"</span>],</div><div class="line">            <span class="string">'Browser language is "&#123;lang&#125;".'</span>: [<span class="string">"La langue du navigateur est « &#123;lang&#125; »."</span>],</div><div class="line">            <span class="string">"Close"</span>: [<span class="string">"Fermer"</span>]</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"it"</span>: &#123;</div><div class="line">        <span class="string">"plural-forms"</span>: <span class="string">"nplurals=2; plural=(n != 1);"</span>,</div><div class="line">        <span class="string">"messages"</span>: &#123;</div><div class="line">            <span class="string">"Hello World"</span>: [<span class="string">"Buongiorno il mondo"</span>],</div><div class="line">            <span class="string">'Browser language is "&#123;lang&#125;".'</span>: [<span class="string">'La lingua del browser è "&#123;lang&#125;".'</span>],</div><div class="line">            <span class="string">"Close"</span>: [<span class="string">"Chiudere"</span>]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">tr.locale = tr.guessUserLanguage();  <span class="comment">// Browser language</span></div><div class="line"></div><div class="line"><span class="comment">// Language selector</span></div><div class="line"><span class="keyword">var</span> layout = <span class="keyword">new</span> photonui.BoxLayout(&#123;</div><div class="line">    orientation: <span class="string">"vertical"</span>,</div><div class="line">    children: [</div><div class="line">        <span class="keyword">new</span> photonui.Label(&#123;</div><div class="line">            text: _(<span class="string">'Browser language is "&#123;lang&#125;".'</span>, &#123;</div><div class="line">                lang: tr.guessUserLanguage()</div><div class="line">            &#125;)</div><div class="line">        &#125;),</div><div class="line">        <span class="keyword">new</span> photonui.Select(&#123;</div><div class="line">            name: <span class="string">"lang"</span>,</div><div class="line">            placeholder: <span class="string">"Choose a language..."</span>,</div><div class="line">            value: tr.locale,</div><div class="line">            children: [</div><div class="line">                <span class="keyword">new</span> photonui.MenuItem(&#123;value: <span class="string">"en"</span>, text: <span class="string">"English"</span>&#125;),</div><div class="line">                <span class="keyword">new</span> photonui.MenuItem(&#123;value: <span class="string">"fr"</span>, text: <span class="string">"Français"</span>&#125;),</div><div class="line">                <span class="keyword">new</span> photonui.MenuItem(&#123;value: <span class="string">"it"</span>, text: <span class="string">"Italiano"</span>&#125;),</div><div class="line">            ],</div><div class="line">            callbacks: &#123;</div><div class="line">                <span class="string">"value-changed"</span>: <span class="function"><span class="keyword">function</span>(<span class="params">widget, value</span>) </span>&#123;</div><div class="line">                    tr.locale = value;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    ]</div><div class="line">&#125;);</div><div class="line">photonui.domInsert(layout, <span class="string">"demo"</span>);</div><div class="line"></div><div class="line"><span class="comment">// A window</span></div><div class="line"><span class="keyword">var</span> pos = photonui.Helpers.getAbsolutePosition(<span class="string">"demo"</span>);</div><div class="line"><span class="keyword">var</span> win = <span class="keyword">new</span> photonui.Window(&#123;</div><div class="line">    visible: <span class="literal">true</span>,</div><div class="line">    title: _(<span class="string">"Hello World"</span>),</div><div class="line">    x: pos.x, y: pos.y + <span class="number">100</span>,</div><div class="line">    width: <span class="number">250</span>,</div><div class="line">    padding: <span class="number">20</span>,</div><div class="line">    child: <span class="keyword">new</span> photonui.Button(&#123;</div><div class="line">        text: _(<span class="string">"Close"</span>),</div><div class="line">        callbacks: &#123;</div><div class="line">            <span class="string">"click"</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; win.hide(); &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;),</div><div class="line">    callbacks: &#123;</div><div class="line">        <span class="string">"close-button-clicked"</span>: <span class="function"><span class="keyword">function</span>(<span class="params">widget</span>) </span>&#123; widget.hide(); &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+    </article>
+</div>
+
+
+        </div>
+
+        <footer id="footer">
+    <p>
+        Copyright (c)  2014-2016 Wanadev
+         - <a href="http://www.wanadev.fr">www.wanadev.fr</a><br />
+        Unless otherwise specified, all content of this site is published under the
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">cc by-sa 3.0</a> license
+    </p>
+</footer>
+
+
+    </body>
+
+</html>
+

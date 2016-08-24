@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Template - PhotonUI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/png" href="/PhotonUI/images/favicon.png" />
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/PhotonUI/style/style.css">
+        <script src="/PhotonUI/js/photonui.js"></script>
+        <script src="/PhotonUI/js/highlight.pack.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+    <div class="page">
+
+        <div class="header-left">
+            <img src="/PhotonUI/images/photonui-logo_white_300x300.png" alt="PhotonUI logo" />
+        </div>
+
+        <div class="header-right">
+            <h1>PhotonUI</h1>
+            <p>A javascript framework to create user interfaces</p>
+            <nav class="nav">
+                
+                    <a href="/PhotonUI/">Home</a>
+                
+                    <a href="/PhotonUI/doc/">Documentation</a>
+                
+                    <a href="https://github.com/wanadev/PhotonUI">GitHub</a>
+                
+                    <a href="https://github.com/wanadev/PhotonUI/archive/master.zip">Download</a>
+                
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+
+        <div id="content">
+            
+
+    <div class="demo-runner">
+        <div class="page">
+            <div class="left">
+                
+                    <h2>Template</h2>
+                
+                <div id="demo"></div>
+            </div>
+            <div class="right">
+                <div id="demo-error"></div>
+                <script type="text/plain" id="demo-code-content">var TEMPLATE = "";
+TEMPLATE += "<strong><%- title %></strong>";
+TEMPLATE += "<ul>";
+TEMPLATE += "<% for (var i = 0 ; i < animals.length ; i++) { %>";
+TEMPLATE += "<li><%- animals[i] %></li>";
+TEMPLATE += "<% } %>";
+TEMPLATE += "</ul>";
+
+var tpl = new photonui.Template({
+    template: TEMPLATE,
+    data: {
+        animals: ["cat", "dog", "parrot", "fish"],
+        title: "Animals:"
+    }
+});
+
+photonui.domInsert(tpl, "demo");
+</script>
+                <div id="demo-code"></div>
+                <button id="run-script"><i class="fa fa-play"></i> Run (Ctrl+Enter)</button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <script src="/PhotonUI/js/codemirror.js"></script>
+    <script src="/PhotonUI/js/codemirror-mode-javascript.js"></script>
+    <script src="/PhotonUI/js/script-runner.js"></script>
+
+
+<div class="page">
+    <article id="page-width-demo-undefined" class="article article-type-page-width-demo">
+        <h3 id="Class-Reference"><a href="#Class-Reference" class="headerlink" title="Class Reference"></a>Class Reference</h3><ul>
+<li><a href="../../ref/classes/photonui.Template.html">Template class reference</a></li>
+</ul>
+<h3 id="Templating-Syntax"><a href="#Templating-Syntax" class="headerlink" title="Templating Syntax"></a>Templating Syntax</h3><p>The <code>photonui.Template</code> widget use lodash to generates template. Please read the lodash documentation for mode informations:</p>
+<ul>
+<li><a href="https://lodash.com/docs#template" target="_blank" rel="external">https://lodash.com/docs#template</a></li>
+</ul>
+<h3 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> TEMPLATE = <span class="string">""</span>;</div><div class="line">TEMPLATE += <span class="string">"&lt;ul&gt;"</span>;</div><div class="line">TEMPLATE += <span class="string">"&lt;% for (var i = 0 ; i &lt; list.length ; i++) &#123; %&gt;"</span>;</div><div class="line">TEMPLATE += <span class="string">"&lt;li&gt;&lt;%- list[i] %&gt;&lt;/li&gt;"</span>;</div><div class="line">TEMPLATE += <span class="string">"&lt;% &#125; %&gt;"</span>;</div><div class="line">TEMPLATE += <span class="string">"&lt;/ul&gt;"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> tpl = <span class="keyword">new</span> photonui.Template(&#123;</div><div class="line">    template: TEMPLATE,</div><div class="line">    data: &#123;</div><div class="line">        list: [<span class="string">"Item 1"</span>, <span class="string">"Item 2"</span>, <span class="string">"Item 3"</span>]</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> field = <span class="keyword">new</span> photonui.TextField(&#123;</div><div class="line">    value: <span class="string">"Item"</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> btn = <span class="keyword">new</span> photonui.Button(&#123;</div><div class="line">    text: <span class="string">"Add"</span>,</div><div class="line">    callbacks: &#123;</div><div class="line">        click: <span class="function"><span class="keyword">function</span> (<span class="params">widget</span>) </span>&#123;</div><div class="line">            tpl.data.list.push(field.value);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> box = <span class="keyword">new</span> photonui.BoxLayout(&#123;</div><div class="line">    children: [</div><div class="line">        <span class="keyword">new</span> photonui.BoxLayout(&#123;</div><div class="line">            orientation: <span class="string">"horizontal"</span>,</div><div class="line">            children: [field, btn]</div><div class="line">        &#125;),</div><div class="line">        tpl</div><div class="line">    ]</div><div class="line">&#125;);</div><div class="line"></div><div class="line">photonui.domInsert(box, <span class="string">"demo"</span>);;</div></pre></td></tr></table></figure>
+
+    </article>
+</div>
+
+
+        </div>
+
+        <footer id="footer">
+    <p>
+        Copyright (c)  2014-2016 Wanadev
+         - <a href="http://www.wanadev.fr">www.wanadev.fr</a><br />
+        Unless otherwise specified, all content of this site is published under the
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">cc by-sa 3.0</a> license
+    </p>
+</footer>
+
+
+    </body>
+
+</html>
+

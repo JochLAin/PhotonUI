@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Quick Start - PhotonUI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/png" href="/PhotonUI/images/favicon.png" />
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/PhotonUI/style/style.css">
+        <script src="/PhotonUI/js/photonui.js"></script>
+        <script src="/PhotonUI/js/highlight.pack.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+    <div class="page">
+
+        <div class="header-left">
+            <img src="/PhotonUI/images/photonui-logo_white_300x300.png" alt="PhotonUI logo" />
+        </div>
+
+        <div class="header-right">
+            <h1>PhotonUI</h1>
+            <p>A javascript framework to create user interfaces</p>
+            <nav class="nav">
+                
+                    <a href="/PhotonUI/">Home</a>
+                
+                    <a href="/PhotonUI/doc/">Documentation</a>
+                
+                    <a href="https://github.com/wanadev/PhotonUI">GitHub</a>
+                
+                    <a href="https://github.com/wanadev/PhotonUI/archive/master.zip">Download</a>
+                
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+
+        <div id="content">
+            
+
+    <div class="demo-runner">
+        <div class="page">
+            <div class="left">
+                
+                    <h2>Quick Start</h2>
+                
+                <div id="demo"></div>
+            </div>
+            <div class="right">
+                <div id="demo-error"></div>
+                <script type="text/plain" id="demo-code-content">// Feel free to test some code here :)
+</script>
+                <div id="demo-code"></div>
+                <button id="run-script"><i class="fa fa-play"></i> Run (Ctrl+Enter)</button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <script src="/PhotonUI/js/codemirror.js"></script>
+    <script src="/PhotonUI/js/codemirror-mode-javascript.js"></script>
+    <script src="/PhotonUI/js/script-runner.js"></script>
+
+
+<div class="page">
+    <article id="page-width-demo-undefined" class="article article-type-page-width-demo">
+        <p>Welcome to the PhotonUI quick start guide. If you want to learn how to build a UI using PhotonUI, you are in the right place.</p>
+<h3 id="Get-PhotonUI"><a href="#Get-PhotonUI" class="headerlink" title="Get PhotonUI"></a>Get PhotonUI</h3><h4 id="Standalone-Version"><a href="#Standalone-Version" class="headerlink" title="Standalone Version"></a>Standalone Version</h4><p>To start using the standalone version of PhotonUI in your projects, you first need to download it:</p>
+<ul>
+<li><p><a href="https://github.com/wanadev/PhotonUI/archive/master.zip" target="_blank" rel="external">Download the latest zipped version on GitHub</a></p>
+</li>
+<li><p>or clone the <a href="https://github.com/wanadev/PhotonUI" target="_blank" rel="external">git repository</a>: <code>git clone git@github.com:wanadev/PhotonUI.git</code></p>
+</li>
+</ul>
+<p>All the files you need are in the <code>dist</code> folder. You just have to import</p>
+<ul>
+<li><p><code>photonui-base.css</code> (must be imported first),</p>
+</li>
+<li><p><code>photonui-theme-particle.css</code>,</p>
+</li>
+<li><p>and<code>photonui.js</code> (or <code>photonui.min.js</code>)</p>
+</li>
+</ul>
+<p>in your page:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Boilerplate<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></div><div class="line">        </div><div class="line">        <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"photonui/photonui-base.css"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"photonui/photonui-theme-particle.css"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"photonui/photonui.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        </div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="NPM-and-Browserify"><a href="#NPM-and-Browserify" class="headerlink" title="NPM and Browserify"></a>NPM and Browserify</h4><p>If you are using <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> in your project, a <a href="https://www.npmjs.com/package/photonui" target="_blank" rel="external">NPM package</a> is available. To install it, juste type:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save photonui</div></pre></td></tr></table></figure>
+<p>then, to use it in your project you just have to import PhotonUI:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> photonui = <span class="built_in">require</span>(<span class="string">"photonui"</span>);</div></pre></td></tr></table></figure>
+<p><strong>NOTE:</strong> do not forget to import CSS files in your HTML page:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./node_modules/photonui/dist/photonui-base.css"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./node_modules/photonui/dist/photonui-theme-particle.css"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Using-Your-First-Widgets"><a href="#Using-Your-First-Widgets" class="headerlink" title="Using Your First Widgets"></a>Using Your First Widgets</h3><p>Some widgets, like <a href="widgets/window.html"><code>photonui.Window</code></a> are “root widgets” ; that means they don’t need a parent to be displayed on the page. To use a root widget, you just have to instantiate its class with the desired parameters:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> win = <span class="keyword">new</span> photonui.Window(&#123;</div><div class="line">    title: <span class="string">"Hello World"</span>,</div><div class="line">    height: <span class="number">100</span>,</div><div class="line">    x: <span class="number">100</span>, y: <span class="number">400</span>,</div><div class="line">    visible: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>The majority of the widgets are not “root widgets”, they need a parent to be displayed.</p>
+<p>You can give them any DOM element as parent:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create a button</span></div><div class="line"><span class="keyword">var</span> btn = <span class="keyword">new</span> photonui.Button();</div><div class="line"></div><div class="line"><span class="comment">// and insert it in the HTML element whose id is "demo"</span></div><div class="line">photonui.domInsert(btn, <span class="string">"demo"</span>);</div></pre></td></tr></table></figure>
+<p>… or any PhotonUI widget that can contain other widgets (“container” and “layout” widgets):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create a window</span></div><div class="line"><span class="keyword">var</span> win = <span class="keyword">new</span> photonui.Window(&#123;</div><div class="line">    title: <span class="string">"Hello World"</span>,</div><div class="line">    padding: <span class="number">10</span>,</div><div class="line">    x: <span class="number">100</span>, y: <span class="number">400</span>,</div><div class="line">    visible: <span class="literal">true</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Create a button</span></div><div class="line"><span class="keyword">var</span> btn = <span class="keyword">new</span> photonui.Button();</div><div class="line"></div><div class="line"><span class="comment">// Add the button in the window</span></div><div class="line">win.child = btn;</div></pre></td></tr></table></figure>
+<h3 id="Binding-Events"><a href="#Binding-Events" class="headerlink" title="Binding Events"></a>Binding Events</h3><p>Each PhotonUI Widget comes with a set of defined events (called <code>wEvent</code>) to which you can attach one or more callbacks.</p>
+<p>For example, the <a href="widgets/button.html"><code>photonui.Button</code></a> widget has a <code>click</code> wEvent that is fired each time the user clicks on the button:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create a button</span></div><div class="line"><span class="keyword">var</span> btn = <span class="keyword">new</span> photonui.Button();</div><div class="line"></div><div class="line"><span class="comment">// define a callback for the "click" WEvent</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">onBtnClicked</span>(<span class="params">widget, event</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"Button clicked!"</span>);</div><div class="line">&#125;</div><div class="line">btn.registerCallback(</div><div class="line">    <span class="string">"clic-clac"</span>,   <span class="comment">// id (any string you want, must be unique for the widget)</span></div><div class="line">    <span class="string">"click"</span>,       <span class="comment">// wEvent (the name of the event)</span></div><div class="line">    onBtnClicked   <span class="comment">// callback (called when the wEvent is fired)</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="comment">// and insert it in the HTML element whose id is "demo"</span></div><div class="line">photonui.domInsert(btn, <span class="string">"demo"</span>);</div></pre></td></tr></table></figure>
+<h3 id="Building-More-Complex-UI-Using-Layouts"><a href="#Building-More-Complex-UI-Using-Layouts" class="headerlink" title="Building More Complex UI Using Layouts"></a>Building More Complex UI Using Layouts</h3><p>There are 5 main types of widgets in PhotonUI:</p>
+<ul>
+<li><p><strong>Interactive widgets:</strong> widgets used to get feedback from the user (e.g. <a href="widgets/button.html"><code>photonui.Button</code></a>, <a href="widgets/textfield.html"><code>photonui.TextField</code></a>,…),</p>
+</li>
+<li><p><strong>Visual-Only widgets:</strong> only intended to be displayed, no interaction with the user (e.g. <a href="widgets/faicon.html"><code>photonui.FAIcon</code></a>, <a href="widgets/label.html"><code>photonui.Label</code></a>, <a href="widgets/separator.html"><code>photonui.Separator</code></a>,…),</p>
+</li>
+<li><p><strong>Non-Visual widgets:</strong> widgets that do not display anything but that work behind the scene (e.g. <a href="widgets/translation.html"><code>photonui.Translation</code></a>, <a href="widgets/filemanager.html"><code>photonui.FileManager</code></a>, <a href="widgets/mousemanager.html"><code>photonui.MouseManager</code></a>,…),</p>
+</li>
+<li><p><strong>Container widgets:</strong> widgets, interactive or not, that can contain <strong>one</strong> child widget (e.g. <a href="widgets/window.html"><code>photonui.Window</code></a>, <a href="widgets/menuitem.html"><code>photonui.MenuItem</code></a>,…),</p>
+</li>
+<li><p>and <strong>Layout widgets:</strong> widgets used to arrange other widgets in order to create a UI (e.g. <a href="widgets/boxlayout.html"><code>photonui.BoxLayout</code></a>, <a href="widgets/gridlayout.html"><code>photonui.GridLayout</code></a>,…).</p>
+</li>
+</ul>
+<p>So if we want to create a window with two buttons inside, we will need to use a layout. The most basic and simple layout widget is <a href="widgets/boxlayout.html"><code>photonui.BoxLayout</code></a>. Let’s use it to build our UI:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create each widget of the UI</span></div><div class="line"><span class="keyword">var</span> win = <span class="keyword">new</span> photonui.Window(&#123;</div><div class="line">    title: <span class="string">"Layout Example"</span>,</div><div class="line">    x: <span class="number">100</span>, y: <span class="number">400</span>,</div><div class="line">    visible: <span class="literal">true</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> box = <span class="keyword">new</span> photonui.BoxLayout(&#123;</div><div class="line">    orientation: <span class="string">"vertical"</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> btn1 = <span class="keyword">new</span> photonui.Button(&#123;</div><div class="line">    text: <span class="string">"Button 1"</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> btn2 = <span class="keyword">new</span> photonui.Button(&#123;</div><div class="line">    text: <span class="string">"Button 2"</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Build the UI using the layout</span></div><div class="line">box.addChild(btn1);  <span class="comment">// Alternative syntax:</span></div><div class="line">box.addChild(btn2);  <span class="comment">// box.children = [btn1, btn2];</span></div><div class="line"></div><div class="line">win.child = box;</div><div class="line"></div><div class="line"><span class="comment">// Add a callback to the first button</span></div><div class="line">btn1.registerCallback(<span class="string">"foobar"</span>, <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">widget, event</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"Button clicked!"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="One-more-thing"><a href="#One-more-thing" class="headerlink" title="One more thing"></a>One more thing</h3><p>In the examples above, we “manually” built the UI by declaring several variables to store widgets and then assembling everything. There is a more efficient way to build your UI (called “declarative way”) that is used in most of the example of the PhotonUI documentation.</p>
+<p>Let’s rewrite our last example (the window with two buttons) in the declarative way:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> photonui.Window(&#123;</div><div class="line">    title: <span class="string">"Layout Example"</span>,</div><div class="line">    x: <span class="number">100</span>, y: <span class="number">400</span>,</div><div class="line">    visible: <span class="literal">true</span>,</div><div class="line">    child: <span class="keyword">new</span> photonui.BoxLayout(&#123;</div><div class="line">        orientation: <span class="string">"vertical"</span>,</div><div class="line">        children: [</div><div class="line">            <span class="keyword">new</span> photonui.Button(&#123;</div><div class="line">                text: <span class="string">"Button 1"</span>,</div><div class="line">                callbacks: &#123;</div><div class="line">                    click: <span class="function"><span class="keyword">function</span>(<span class="params">widget, event</span>) </span>&#123;</div><div class="line">                        alert(<span class="string">"Button clicked!"</span>);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;),</div><div class="line">            <span class="keyword">new</span> photonui.Button(&#123;</div><div class="line">                text: <span class="string">"Button 2"</span></div><div class="line">            &#125;)</div><div class="line">        ]</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Here-We-Are"><a href="#Here-We-Are" class="headerlink" title="Here We Are"></a>Here We Are</h3><p>You are now ready to start using PhotonUI on your own project. :)</p>
+
+    </article>
+</div>
+
+
+        </div>
+
+        <footer id="footer">
+    <p>
+        Copyright (c)  2014-2016 Wanadev
+         - <a href="http://www.wanadev.fr">www.wanadev.fr</a><br />
+        Unless otherwise specified, all content of this site is published under the
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">cc by-sa 3.0</a> license
+    </p>
+</footer>
+
+
+    </body>
+
+</html>
+
