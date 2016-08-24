@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2015, Wanadev <http://www.wanadev.fr/>
+ * Copyright (c) 2016, Wanadev <http://www.wanadev.fr/>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,8 +25,42 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * Authored by: Fabien LOISON <https://github.com/flozz>
+ * Authored by: Jocelyn FAIHY
  */
 
+.photonui-iconexpander {
+    @spacing: 5px;
 
-// The theme of this widget is in the button.less file
+    &-title {
+        @arrow-size: 6px;
+        padding: @spacing;
+        padding-left: @arrow-size + @spacing;
+        box-sizing: border-box;
+        color: @color-text;
+        padding: 5px;
+
+        &:focus,
+        &:active {
+            outline: none;
+            box-shadow: inset 1px 1px 0 @color-widget-border-focus, inset -1px -1px 0 @color-widget-border-focus;
+        }
+
+        &:hover {
+            outline: none;
+            background: @color-highlight-background;
+            color: @color-highlight-text;
+        }
+
+        &-icon {
+            padding-right: 5px;
+        }
+
+        &-content {
+            font-weight: bold;
+        }
+    }
+
+    &.photonui-iconexpander-folded &-title-icon {
+        padding-right: 7px;
+    }
+}
